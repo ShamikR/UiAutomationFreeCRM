@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.freecrm.uiAutomation.listners.TestNGListners"/>
+  </listeners>
+  <test name="LoginPageTests(failed)">
+    <classes>
+      <class name="com.freecrm.uiAutomation.LoginPageTest.TC001_VerifyPageTitle">
+        <methods>
+          <include name="TC001_testLoginPageTitle"/>
+          <include name="setUP"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.freecrm.uiAutomation.LoginPageTest.TC001_VerifyPageTitle -->
+    </classes>
+  </test> <!-- LoginPageTests(failed) -->
+</suite> <!-- Failed suite [Suite] -->
