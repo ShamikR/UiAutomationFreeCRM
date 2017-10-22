@@ -10,11 +10,13 @@ import com.freecrm.uiAutomation.base.TestBase;
 import com.freecrm.uiAutomation.utility.ActionUtil;
 import com.freecrm.uiAutomation.utility.LoggerUtil;
 import com.freecrm.uiAutomation.utility.PageElementUtil;
+import com.freecrm.uiAutomation.utility.WaitUtil;
 import com.freecrm.uiAutomation.utility.WinUtil;
 
 public class HomePage extends TestBase {
 
 	private final Logger log = LoggerUtil.getLogger(HomePage.class);
+	private WaitUtil wait = new WaitUtil();
 
 	@FindBy(xpath = "//a[contains(@href,'logout')]")
 	WebElement linkLogout;
@@ -50,7 +52,9 @@ public class HomePage extends TestBase {
 	public ContactsPage clickOnContactsLink() {
 		log.info("Clicking on contact link..");
 		WinUtil.switchToFrame(driver, "mainpanel");
-		linkContacts.click();
+		wait.javaScreipWait();
+		wait.waitForElement(linkContacts).click();
+		//linkContacts.click();
 		return new ContactsPage();
 	}
 
