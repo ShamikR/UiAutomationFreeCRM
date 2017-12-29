@@ -10,6 +10,7 @@ public class ActionUtil {
 	public static void mouseHoverToElement(WebDriver driver, WebElement element) {
 		act = new Actions(driver);
 		act.moveToElement(element);
+		act.build().perform();
 	}
 
 }

@@ -17,11 +17,11 @@ public class TC001_VerifyContactsPageLebel extends TestBase {
 	@Test
 	public void TC001_testContactsPageLebel() {
 		log.info("Excecuting Test: "+this.getClass().getName());
-		HomePage objHomePahe = new HomePage();
+		HomePage objHomePage = new HomePage();
 		ContactsPage objContactPage = new ContactsPage();
 		LoginPage objLoginPage = new LoginPage();
 		objLoginPage.login(obj.getUserName(), obj.getPassword());
-		objHomePahe.clickOnContactsLink();
+		objHomePage.clickOnContactsLink();
 		String name = objContactPage.getContactLevel();
 		Assert.assertEquals(name, "Contacts");
 	}

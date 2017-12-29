@@ -22,6 +22,7 @@ public class LoginPage extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 
+	/**
 	public HomePage login(String username, String password) {
 		//driver.findElement(By.xpath("//input[@name='username']")).sendKeys(username);
 		loginUserName.clear();
@@ -33,8 +34,32 @@ public class LoginPage extends TestBase{
 		btnLogin.click();
 		return new HomePage();
 	}
+	**/
+	public void setUserName(String username) {
+		loginUserName.clear();
+		log.info("User Name: " + username);
+		loginUserName.sendKeys(username);
+	}
+	
+	public void setPassword(String password) {
+		loginPassword.clear();
+		log.info("Password: " + password);
+		loginPassword.sendKeys(password);
+	}
+	
+	public HomePage clickOnLoginButton() {
+		btnLogin.click();
+		log.info("Clicking on Login button");
+		return new HomePage();
+	}
 
 	public String getLoginPageTitle() {
 		return driver.getTitle();
+	}
+	
+	public HomePage login(String username, String password) {
+		setUserName(username);
+		setPassword(password);
+		return clickOnLoginButton();
 	}
 }

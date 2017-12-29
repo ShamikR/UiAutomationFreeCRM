@@ -24,6 +24,8 @@ public class HomePage extends TestBase {
 	WebElement linkContacts;
 	@FindBy(xpath = "//li/a[contains(.,'Calendar')]")
 	WebElement linkCalender;
+	@FindBy
+	WebElement linkCompany;
 
 	public HomePage() {
 		PageFactory.initElements(driver, this);
@@ -77,4 +79,16 @@ public class HomePage extends TestBase {
 		driver.findElement(By.xpath("//li/a[contains(.,'New Event')]")).click();
 		return new NewEventPage();
 	}
+	
+	public void mouceHoverToCompany() {
+		log.info("Mpuce Hovering to company..");
+		ActionUtil.mouseHoverToElement(driver, linkCompany);		
+	}
+	
+	public NewCompanyPage selectNewCompany() {
+		log.info("navigating to New Company link..");
+		driver.findElement(By.cssSelector("a[title='New Company']")).click();
+		return new NewCompanyPage();
+	}
+	
 }

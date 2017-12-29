@@ -38,5 +38,23 @@ public class NewContactPage extends TestBase {
 		btnSave.click();
 		
 	}
+	
+	public void setTitle(String title) {
+		oSelect = new Select(selectTitle);
+		log.info("Setting Title as:- " + title);
+	}
+	public void setFirstName(String fName) {
+		firstName.clear();
+		log.info("Setting First Name as:- " + fName);
+		firstName.sendKeys(fName);
+	}
+	public void setLastName(String lName) {
+		log.info("Setting Last Name as:- " + lName);
+		lastName.sendKeys(lName);
+	}
+	public void clickOnSaveBtn() {
+		log.info("Clicking on Save Btn..");
+		btnSave.click();
+	}
 
 }

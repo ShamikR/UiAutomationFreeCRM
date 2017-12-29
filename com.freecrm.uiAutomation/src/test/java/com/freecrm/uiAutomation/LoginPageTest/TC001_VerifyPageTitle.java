@@ -16,7 +16,7 @@ public class TC001_VerifyPageTitle extends TestBase {
 	public void TC001_testLoginPageTitle() {
 		objLoginPage = new LoginPage();
 		log.info("Executing Test Case:- TC001_testLoginPageTitle");
-		Assert.assertEquals(objLoginPage.getLoginPageTitle(),"#1 Free CRM for Any Business: Online Customer Relationship Software1");
+		Assert.assertEquals(objLoginPage.getLoginPageTitle(),"#1 Free CRM for Any Business: Online Customer Relationship Software");
 	}
 	
 }

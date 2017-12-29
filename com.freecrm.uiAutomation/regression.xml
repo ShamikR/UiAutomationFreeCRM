@@ -4,7 +4,7 @@
 	<listeners>
 		<listener class-name="com.freecrm.uiAutomation.listners.TestNGListners" />
 	</listeners>
-	<test name="LoginPageTests">
+	<test name="LoginPageTests" enabled="false">
 		<classes>
 			<class name="com.freecrm.uiAutomation.LoginPageTest.TC001_VerifyPageTitle" />
 			<class

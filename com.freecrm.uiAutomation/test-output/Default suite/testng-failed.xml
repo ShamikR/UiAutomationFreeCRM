@@ -8,7 +8,6 @@
           <include name="TC001_testLoginPageTitle"/>
           <include name="setUP"/>
           <include name="tearDown"/>
-          <include name="createFolder"/>
         </methods>
       </class> <!-- com.freecrm.uiAutomation.LoginPageTest.TC001_VerifyPageTitle -->
     </classes>

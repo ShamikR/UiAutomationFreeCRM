@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="com.freecrm.uiAutomation.listners.TestNGListners"/>
   </listeners>
-  <test name="LoginPageTests(failed)">
+  <test name="Tests(failed)">
     <classes>
       <class name="com.freecrm.uiAutomation.LoginPageTest.TC001_VerifyPageTitle">
         <methods>
@@ -13,6 +13,20 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.freecrm.uiAutomation.LoginPageTest.TC001_VerifyPageTitle -->
+      <class name="com.freecrm.uiAutomation.HomePageTest.TC001_VerifyHomePageTitle">
+        <methods>
+          <include name="setUP"/>
+          <include name="tearDown"/>
+          <include name="TC001_testHomePageTitle"/>
+        </methods>
+      </class> <!-- com.freecrm.uiAutomation.HomePageTest.TC001_VerifyHomePageTitle -->
+      <class name="com.freecrm.uiAutomation.LoginPageTest.TC002_VerifyLoginWithValidCredentials">
+        <methods>
+          <include name="setUP"/>
+          <include name="tearDown"/>
+          <include name="TC002_testValidLogin"/>
+        </methods>
+      </class> <!-- com.freecrm.uiAutomation.LoginPageTest.TC002_VerifyLoginWithValidCredentials -->
     </classes>
-  </test> <!-- LoginPageTests(failed) -->
+  </test> <!-- Tests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -34,7 +34,11 @@ public class TC001_CreateNewContacts extends TestBase{
 		objHomePage = objLoginPage.login(obj.getUserName(), obj.getPassword());
 		objContactPage = objHomePage.clickOnContactsLink();
 		objNewContactPage = objContactPage.clickOnNewContactBtn();
-		objNewContactPage.createNewContact(title, fName, lName);
+		//objNewContactPage.createNewContact(title, fName, lName);
+		objNewContactPage.setTitle(title);
+		objNewContactPage.setFirstName(fName);
+		objNewContactPage.setLastName(lName);
+		objNewContactPage.clickOnSaveBtn();
 		objHomePage.logOut();
 	}
 

@@ -17,7 +17,7 @@ import com.freecrm.uiAutomation.utility.LoggerUtil;
 import com.freecrm.uiAutomation.utility.PropertyFileReaderUtil;
 
 public class TestBase {
-	public static WebDriver driver;
+	protected static WebDriver driver;
 	public static EventFiringWebDriver e_driver;
 	private static final Logger log = LoggerUtil.getLogger(TestBase.class);
 	public ConfigReader obj = new ConfigReader();
