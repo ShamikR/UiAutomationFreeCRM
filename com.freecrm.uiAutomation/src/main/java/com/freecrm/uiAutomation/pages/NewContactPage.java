@@ -26,6 +26,7 @@ public class NewContactPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
+	/*
 	public void createNewContact(String title, String fName, String lName) {
 		oSelect = new Select(selectTitle);
 		log.info("Setting Title as:- " + title);
@@ -38,7 +39,7 @@ public class NewContactPage extends TestBase {
 		btnSave.click();
 		
 	}
-	
+	*/
 	public void setTitle(String title) {
 		oSelect = new Select(selectTitle);
 		log.info("Setting Title as:- " + title);
