@@ -25,21 +25,6 @@ public class NewContactPage extends TestBase {
 	public NewContactPage() {
 		PageFactory.initElements(driver, this);
 	}
-
-	/*
-	public void createNewContact(String title, String fName, String lName) {
-		oSelect = new Select(selectTitle);
-		log.info("Setting Title as:- " + title);
-		oSelect.selectByVisibleText(title);
-		log.info("Setting First Name as:- " + fName);
-		firstName.sendKeys(fName);
-		log.info("Setting Last Name as:- " + lName);
-		lastName.sendKeys(lName);
-		//WinUtil.switchToFrame(driver, "mainpanel");
-		btnSave.click();
-		
-	}
-	*/
 	public void setTitle(String title) {
 		oSelect = new Select(selectTitle);
 		log.info("Setting Title as:- " + title);
