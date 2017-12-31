@@ -1,25 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="66024" started-at="2017-12-13T04:47:59Z" finished-at="2017-12-13T04:49:05Z">
+  <suite name="Default suite" duration-ms="100052" started-at="2017-12-30T11:30:10Z" finished-at="2017-12-30T11:31:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="66024" started-at="2017-12-13T04:47:59Z" finished-at="2017-12-13T04:49:05Z">
-      <class name="com.freecrm.uiAutomation.ContactsPageTest.TC001_VerifyContactsPageLebel">
-        <test-method status="PASS" signature="setUP()[pri:0, instance:com.freecrm.uiAutomation.ContactsPageTest.TC001_VerifyContactsPageLebel@61f8bee4]" name="setUP" is-config="true" duration-ms="42861" started-at="2017-12-13T10:17:59Z" finished-at="2017-12-13T10:18:42Z">
+    <test name="Default test" duration-ms="100052" started-at="2017-12-30T11:30:10Z" finished-at="2017-12-30T11:31:50Z">
+      <class name="com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts">
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts@887af79]" name="setUP" is-config="true" duration-ms="15082" started-at="2017-12-30T17:00:10Z" finished-at="2017-12-30T17:00:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method status="PASS" signature="TC001_testContactsPageLebel()[pri:0, instance:com.freecrm.uiAutomation.ContactsPageTest.TC001_VerifyContactsPageLebel@61f8bee4]" name="TC001_testContactsPageLebel" duration-ms="22001" started-at="2017-12-13T10:18:42Z" finished-at="2017-12-13T10:19:04Z">
+        <test-method status="PASS" signature="TC001_testCreateNewContacts(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts@887af79]" name="TC001_testCreateNewContacts" duration-ms="44511" started-at="2017-12-30T17:00:28Z" data-provider="getData" finished-at="2017-12-30T17:01:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mr.]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Souni]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Banerjee]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC001_testContactsPageLebel -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.freecrm.uiAutomation.ContactsPageTest.TC001_VerifyContactsPageLebel@61f8bee4]" name="tearDown" is-config="true" duration-ms="898" started-at="2017-12-13T10:19:04Z" finished-at="2017-12-13T10:19:05Z">
+        </test-method> <!-- TC001_testCreateNewContacts -->
+        <test-method status="PASS" signature="TC001_testCreateNewContacts(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts@887af79]" name="TC001_testCreateNewContacts" duration-ms="35118" started-at="2017-12-30T17:01:13Z" data-provider="getData" finished-at="2017-12-30T17:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dr.]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Shamik]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sen]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC001_testCreateNewContacts -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts@887af79]" name="tearDown" is-config="true" duration-ms="2204" started-at="2017-12-30T17:01:48Z" finished-at="2017-12-30T17:01:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.freecrm.uiAutomation.ContactsPageTest.TC001_VerifyContactsPageLebel -->
+      </class> <!-- com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

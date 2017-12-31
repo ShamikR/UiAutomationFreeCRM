@@ -28,6 +28,7 @@ public class NewContactPage extends TestBase {
 	public void setTitle(String title) {
 		oSelect = new Select(selectTitle);
 		log.info("Setting Title as:- " + title);
+		oSelect.selectByValue(title);
 	}
 	public void setFirstName(String fName) {
 		firstName.clear();

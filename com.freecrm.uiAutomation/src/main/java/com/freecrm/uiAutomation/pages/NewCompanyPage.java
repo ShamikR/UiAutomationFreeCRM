@@ -30,14 +30,29 @@ public class NewCompanyPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void createNewCompany(String cName, String cStatus, String lookUpCompanyName) {
+	public void setCompanyName(String cName) {
+		log.info("Setting company name as:- " + cName);
 		companyName.sendKeys(cName);
+	}
+
+	public void setCompanyStatus(String cStatus) {
 		oSelect = new Select(selectStatus);
+		log.info("Setting company status as:- "+cStatus);
 		oSelect.selectByVisibleText(cStatus);
-		String parentWindow = driver.getWindowHandle();
+	}
+	
+	public String getParentWindowID() {
+		return driver.getWindowHandle();
+	}
+	
+	public void clickOnLookUpCompany() {
+		log.info("Clicking on lookup company button..");
 		lookupCompany.click();
+	}
+	
+	public void selectLookupCompany(String lookUpCompanyName) {
+		String parentWindow = getParentWindowID();
 		Set<String> Setwindow = driver.getWindowHandles();
-		// Iterator<String> it = Setwindow.iterator();
 		for (String handle : Setwindow) {
 			if (handle != parentWindow) {
 				driver.switchTo().window(handle);
@@ -47,5 +62,4 @@ public class NewCompanyPage extends TestBase {
 		driver.findElement(By.cssSelector("input[value='Search']")).click();
 		driver.findElement(By.cssSelector("td.datafield>a")).click();
 	}
-
 }

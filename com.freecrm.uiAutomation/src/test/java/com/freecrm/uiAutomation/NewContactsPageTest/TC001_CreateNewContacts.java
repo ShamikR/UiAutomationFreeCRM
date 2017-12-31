@@ -28,7 +28,7 @@ public class TC001_CreateNewContacts extends TestBase{
 	
 	
 	@Test (dataProvider = "getData")
-	public void TC001_testCreateNewContacts(String title, String fName, String lName) {
+	public void testCreateNewContacts(String title, String fName, String lName) {
 		log.info("Executing test case:- TC001_CreateNewContacts");
 		objLoginPage = new LoginPage();
 		objHomePage = objLoginPage.login(obj.getUserName(), obj.getPassword());
