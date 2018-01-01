@@ -24,7 +24,7 @@ public class HomePage extends TestBase {
 	WebElement linkContacts;
 	@FindBy(xpath = "//li/a[contains(.,'Calendar')]")
 	WebElement linkCalender;
-	@FindBy
+	@FindBy(xpath = "//div[@id='navmenu']//a[contains(text(),'Companies')]")
 	WebElement linkCompany;
 
 	public HomePage() {
@@ -82,6 +82,7 @@ public class HomePage extends TestBase {
 	
 	public void mouceHoverToCompany() {
 		log.info("Mpuce Hovering to company..");
+		WinUtil.switchToFrame(driver, "mainpanel");
 		ActionUtil.mouseHoverToElement(driver, linkCompany);		
 	}
 	

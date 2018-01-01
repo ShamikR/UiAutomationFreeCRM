@@ -23,7 +23,7 @@ public class NewCompanyPage extends TestBase {
 	WebElement selectStatus;
 	@FindBy(css = "input[value='Lookup'][type='button']")
 	WebElement lookupCompany;
-	@FindBy(css = "td>input[value='Save'][class='button']")
+	@FindBy(xpath = "//form[@id='companyForm']//input[@value='Save' and @type='submit']")
 	List<WebElement> listSaveBtn;
 
 	public NewCompanyPage() {
@@ -37,22 +37,24 @@ public class NewCompanyPage extends TestBase {
 
 	public void setCompanyStatus(String cStatus) {
 		oSelect = new Select(selectStatus);
-		log.info("Setting company status as:- "+cStatus);
+		log.info("Setting company status as:- " + cStatus);
 		oSelect.selectByVisibleText(cStatus);
 	}
-	
+
 	public String getParentWindowID() {
 		return driver.getWindowHandle();
 	}
-	
+
 	public void clickOnLookUpCompany() {
 		log.info("Clicking on lookup company button..");
 		lookupCompany.click();
 	}
-	
+
 	public void selectLookupCompany(String lookUpCompanyName) {
 		String parentWindow = getParentWindowID();
+		System.out.println(parentWindow);
 		Set<String> Setwindow = driver.getWindowHandles();
+		//System.out.println(Setwindow.size());
 		for (String handle : Setwindow) {
 			if (handle != parentWindow) {
 				driver.switchTo().window(handle);
@@ -61,5 +63,13 @@ public class NewCompanyPage extends TestBase {
 		driver.findElement(By.cssSelector("#search")).sendKeys(lookUpCompanyName);
 		driver.findElement(By.cssSelector("input[value='Search']")).click();
 		driver.findElement(By.cssSelector("td.datafield>a")).click();
+		String parentWindow1 = getParentWindowID();
+		System.out.println(parentWindow1);
+		driver.switchTo().defaultContent();
+	}
+
+	public void clickOnSaveButton() {
+		log.info("Clicking on save button..");
+		listSaveBtn.get(0);
 	}
 }

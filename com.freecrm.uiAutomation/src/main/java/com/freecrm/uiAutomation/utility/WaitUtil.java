@@ -1,5 +1,6 @@
 package com.freecrm.uiAutomation.utility;
 
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -11,7 +12,6 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.freecrm.uiAutomation.base.TestBase;
-import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 
 public class WaitUtil extends TestBase {
 
@@ -26,7 +26,7 @@ public class WaitUtil extends TestBase {
 
 	public WebElement fluentWait(WebElement element) {
 		WebElement fWait = new FluentWait<WebDriver>(driver).withTimeout(60, TimeUnit.SECONDS)
-				.pollingEvery(5, TimeUnit.SECONDS).ignoring(ElementNotFoundException.class)
+				.pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class)
 				.until(ExpectedConditions.elementToBeClickable(element));
 		return fWait;
 	}

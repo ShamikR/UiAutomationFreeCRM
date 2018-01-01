@@ -1,63 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="100052" started-at="2017-12-30T11:30:10Z" finished-at="2017-12-30T11:31:50Z">
+  <suite name="Default suite" duration-ms="27550" started-at="2018-01-01T15:40:16Z" finished-at="2018-01-01T15:40:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="100052" started-at="2017-12-30T11:30:10Z" finished-at="2017-12-30T11:31:50Z">
-      <class name="com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts">
-        <test-method status="PASS" signature="setUP()[pri:0, instance:com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts@887af79]" name="setUP" is-config="true" duration-ms="15082" started-at="2017-12-30T17:00:10Z" finished-at="2017-12-30T17:00:25Z">
+    <test name="Default test" duration-ms="27550" started-at="2018-01-01T15:40:16Z" finished-at="2018-01-01T15:40:43Z">
+      <class name="com.freecrm.uiAutomation.NewComapyPageTest.TC001_AddNewCompany">
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.freecrm.uiAutomation.NewComapyPageTest.TC001_AddNewCompany@61f8bee4]" name="setUP" is-config="true" duration-ms="9839" started-at="2018-01-01T21:10:16Z" finished-at="2018-01-01T21:10:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method status="PASS" signature="TC001_testCreateNewContacts(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts@887af79]" name="TC001_testCreateNewContacts" duration-ms="44511" started-at="2017-12-30T17:00:28Z" data-provider="getData" finished-at="2017-12-30T17:01:13Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Mr.]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Souni]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Banerjee]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="testAddnewCompany()[pri:0, instance:com.freecrm.uiAutomation.NewComapyPageTest.TC001_AddNewCompany@61f8bee4]" name="testAddnewCompany" duration-ms="17286" started-at="2018-01-01T21:10:26Z" finished-at="2018-01-01T21:10:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC001_testCreateNewContacts -->
-        <test-method status="PASS" signature="TC001_testCreateNewContacts(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts@887af79]" name="TC001_testCreateNewContacts" duration-ms="35118" started-at="2017-12-30T17:01:13Z" data-provider="getData" finished-at="2017-12-30T17:01:48Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Dr.]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Shamik]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Sen]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC001_testCreateNewContacts -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts@887af79]" name="tearDown" is-config="true" duration-ms="2204" started-at="2017-12-30T17:01:48Z" finished-at="2017-12-30T17:01:50Z">
+        </test-method> <!-- testAddnewCompany -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.freecrm.uiAutomation.NewComapyPageTest.TC001_AddNewCompany@61f8bee4]" name="tearDown" is-config="true" duration-ms="343" started-at="2018-01-01T21:10:43Z" finished-at="2018-01-01T21:10:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts -->
+      </class> <!-- com.freecrm.uiAutomation.NewComapyPageTest.TC001_AddNewCompany -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
