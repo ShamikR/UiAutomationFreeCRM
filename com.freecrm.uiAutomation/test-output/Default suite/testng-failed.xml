@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.freecrm.uiAutomation.NewComapyPageTest.TC001_AddNewCompany">
+      <class name="com.freecrm.uiAutomation.ContactsPageTest.JUNK">
         <methods>
-          <include name="setUP"/>
-          <include name="tearDown"/>
-          <include name="testAddnewCompany"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.freecrm.uiAutomation.NewComapyPageTest.TC001_AddNewCompany -->
+      </class> <!-- com.freecrm.uiAutomation.ContactsPageTest.JUNK -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

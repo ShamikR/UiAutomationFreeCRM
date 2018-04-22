@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.freecrm.uiAutomation.base.TestBase;
 import com.freecrm.uiAutomation.utility.LoggerUtil;
 
-public class LoginPage extends TestBase{
+public class LoginPage extends TestBase {
 	private final Logger log = LoggerUtil.getLogger(LoginPage.class);
-	
+
 	@FindBy(xpath = "//input[@name='username']")
 	WebElement loginUserName;
 	@FindBy(xpath = "//input[@name='password']")
@@ -23,30 +23,25 @@ public class LoginPage extends TestBase{
 	}
 
 	/**
-	public HomePage login(String username, String password) {
-		//driver.findElement(By.xpath("//input[@name='username']")).sendKeys(username);
-		loginUserName.clear();
-		loginUserName.sendKeys(username);
-		log.info("User Name:- " + username);
-		loginPassword.clear();
-		loginPassword.sendKeys(password);
-		log.info("Password:- " + password);
-		btnLogin.click();
-		return new HomePage();
-	}
-	**/
+	 * public HomePage login(String username, String password) {
+	 * //driver.findElement(By.xpath("//input[@name='username']")).sendKeys(username);
+	 * loginUserName.clear(); loginUserName.sendKeys(username); log.info("User
+	 * Name:- " + username); loginPassword.clear();
+	 * loginPassword.sendKeys(password); log.info("Password:- " + password);
+	 * btnLogin.click(); return new HomePage(); }
+	 **/
 	public void setUserName(String username) {
 		loginUserName.clear();
 		log.info("User Name: " + username);
 		loginUserName.sendKeys(username);
 	}
-	
+
 	public void setPassword(String password) {
 		loginPassword.clear();
 		log.info("Password: " + password);
 		loginPassword.sendKeys(password);
 	}
-	
+
 	public HomePage clickOnLoginButton() {
 		btnLogin.click();
 		log.info("Clicking on Login button");
@@ -56,7 +51,7 @@ public class LoginPage extends TestBase{
 	public String getLoginPageTitle() {
 		return driver.getTitle();
 	}
-	
+
 	public HomePage login(String username, String password) {
 		setUserName(username);
 		setPassword(password);

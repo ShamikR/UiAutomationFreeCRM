@@ -3,8 +3,9 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
     <listener class-name="com.freecrm.uiAutomation.listners.TestNGListners"/>
+    <listener class-name="com.freecrm.uiAutomation.listners.AnnotationTransformer"/>
   </listeners>
-  <test name="Tests(failed)">
+  <test name="LoginPageTests(failed)">
     <classes>
       <class name="com.freecrm.uiAutomation.LoginPageTest.TC001_VerifyPageTitle">
         <methods>
@@ -13,13 +14,6 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.freecrm.uiAutomation.LoginPageTest.TC001_VerifyPageTitle -->
-      <class name="com.freecrm.uiAutomation.HomePageTest.TC001_VerifyHomePageTitle">
-        <methods>
-          <include name="setUP"/>
-          <include name="tearDown"/>
-          <include name="TC001_testHomePageTitle"/>
-        </methods>
-      </class> <!-- com.freecrm.uiAutomation.HomePageTest.TC001_VerifyHomePageTitle -->
       <class name="com.freecrm.uiAutomation.LoginPageTest.TC002_VerifyLoginWithValidCredentials">
         <methods>
           <include name="setUP"/>
@@ -28,5 +22,38 @@
         </methods>
       </class> <!-- com.freecrm.uiAutomation.LoginPageTest.TC002_VerifyLoginWithValidCredentials -->
     </classes>
-  </test> <!-- Tests(failed) -->
+  </test> <!-- LoginPageTests(failed) -->
+  <test name="HomePageTest(failed)">
+    <classes>
+      <class name="com.freecrm.uiAutomation.HomePageTest.TC001_VerifyHomePageTitle">
+        <methods>
+          <include name="setUP"/>
+          <include name="tearDown"/>
+          <include name="TC001_testHomePageTitle"/>
+        </methods>
+      </class> <!-- com.freecrm.uiAutomation.HomePageTest.TC001_VerifyHomePageTitle -->
+    </classes>
+  </test> <!-- HomePageTest(failed) -->
+  <test name="ContactsPageTest(failed)">
+    <classes>
+      <class name="com.freecrm.uiAutomation.ContactsPageTest.TC001_VerifyContactsPageLebel">
+        <methods>
+          <include name="setUP"/>
+          <include name="tearDown"/>
+          <include name="TC001_testContactsPageLebel"/>
+        </methods>
+      </class> <!-- com.freecrm.uiAutomation.ContactsPageTest.TC001_VerifyContactsPageLebel -->
+    </classes>
+  </test> <!-- ContactsPageTest(failed) -->
+  <test name="NewContactsPageTest(failed)">
+    <classes>
+      <class name="com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts">
+        <methods>
+          <include name="setUP"/>
+          <include name="tearDown"/>
+          <include name="testCreateNewContacts" invocation-numbers="0 0 0 1 1"/>
+        </methods>
+      </class> <!-- com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts -->
+    </classes>
+  </test> <!-- NewContactsPageTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
