@@ -3,8 +3,9 @@
 <suite name="Suite">
 	<listeners>
 		<listener class-name="com.freecrm.uiAutomation.listners.TestNGListners" />
+		<listener class-name="com.freecrm.uiAutomation.listners.AnnotationTransformer" />
 	</listeners>
-	<test name="LoginPageTests" enabled="false">
+	<test name="LoginPageTests">
 		<classes>
 			<class name="com.freecrm.uiAutomation.LoginPageTest.TC001_VerifyPageTitle" />
 			<class
