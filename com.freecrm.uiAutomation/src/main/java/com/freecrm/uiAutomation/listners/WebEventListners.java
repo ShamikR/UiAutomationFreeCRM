@@ -15,6 +15,7 @@ public class WebEventListners extends TestBase implements WebDriverEventListener
 	private final Logger log = LoggerUtil.getLogger(WebEventListners.class);
 
 	public void beforeAlertAccept(WebDriver driver) {
+		
 	}
 
 	public void afterAlertAccept(WebDriver driver) {
