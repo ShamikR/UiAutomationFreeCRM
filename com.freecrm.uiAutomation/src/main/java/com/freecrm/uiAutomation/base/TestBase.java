@@ -23,7 +23,7 @@ public class TestBase {
 	public ConfigReader obj = new ConfigReader();
 	public WebEventListners webListners;
 
-	public static WebDriver getDriverInstance(BrowserType bType) throws Exception {
+	private static WebDriver getDriverInstance(BrowserType bType) throws Exception {
 		try {
 			switch (bType) {
 
@@ -47,7 +47,7 @@ public class TestBase {
 		}
 	}
 
-	public void setUpDriver(BrowserType bType) throws Exception {
+	private void setUpDriver(BrowserType bType) throws Exception {
 		driver = getDriverInstance(bType);
 		e_driver = new EventFiringWebDriver(driver);
 		webListners = new WebEventListners();
