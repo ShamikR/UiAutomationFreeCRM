@@ -13,14 +13,15 @@ public class NewContactPage extends TestBase {
 
 	private Select oSelect;
 	private final Logger log = LoggerUtil.getLogger(NewContactPage.class);
+	
 	@FindBy(css = "select[name='title']")
-	WebElement selectTitle;
+	private WebElement selectTitle;
 	@FindBy(css = "#first_name")
-	WebElement firstName;
+	private WebElement firstName;
 	@FindBy(css = "#surname")
-	WebElement lastName;
+	private WebElement lastName;
 	@FindBy(xpath = "//form[@name='contactForm']//input[@value='Save']")
-	WebElement btnSave;
+	private WebElement btnSave;
 
 	public NewContactPage() {
 		PageFactory.initElements(driver, this);

@@ -15,23 +15,25 @@ import com.freecrm.uiAutomation.base.TestBase;
 
 public class WaitUtil extends TestBase {
 
-	private WebDriverWait wait;
+	private static WebDriverWait wait;
 
-	public WebElement waitForElement(WebElement element) {
+	@SuppressWarnings("deprecation")
+	public static WebElement waitForElement(WebElement element) {
 		wait = new WebDriverWait(driver, obj.getExplicitWait());
 		wait.pollingEvery(5, TimeUnit.SECONDS);
 		WebElement resultElement = wait.until(ExpectedConditions.elementToBeClickable(element));
 		return resultElement;
 	}
 
-	public WebElement fluentWait(WebElement element) {
+	@SuppressWarnings("deprecation")
+	public static WebElement fluentWait(WebElement element) {
 		WebElement fWait = new FluentWait<WebDriver>(driver).withTimeout(60, TimeUnit.SECONDS)
 				.pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class)
 				.until(ExpectedConditions.elementToBeClickable(element));
 		return fWait;
 	}
 	
-	public void javaScreipWait() {
+	public static void javaScreipWait() {
 		ExpectedCondition<Boolean> javaScWait = new ExpectedCondition<Boolean>() {
 
 			public Boolean apply(WebDriver driver_) {

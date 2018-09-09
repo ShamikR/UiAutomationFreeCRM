@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.freecrm.uiAutomation.LoginPageTest.TC002_VerifyLoginWithValidCredentials">
+      <class name="com.freecrm.uiAutomation.HomePageTest.TC002_VerifyCreateNewEventFromHomePage">
         <methods>
           <include name="setUP"/>
           <include name="tearDown"/>
-          <include name="TC002_testValidLogin"/>
+          <include name="TC002_testCreateNewEventFromHomePage"/>
         </methods>
-      </class> <!-- com.freecrm.uiAutomation.LoginPageTest.TC002_VerifyLoginWithValidCredentials -->
+      </class> <!-- com.freecrm.uiAutomation.HomePageTest.TC002_VerifyCreateNewEventFromHomePage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

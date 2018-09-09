@@ -1,13 +1,11 @@
 package com.freecrm.uiAutomation.base;
 
-import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import com.freecrm.uiAutomation.config.browser.BrowserType;
 import com.freecrm.uiAutomation.config.browser.ChromeBrowser;
 import com.freecrm.uiAutomation.config.browser.FirefoxBrowser;
@@ -19,26 +17,29 @@ import com.freecrm.uiAutomation.utility.PropertyFileReaderUtil;
 public class TestBase {
 	protected static WebDriver driver;
 	public static EventFiringWebDriver e_driver;
-	private static final Logger log = LoggerUtil.getLogger(TestBase.class);
-	public ConfigReader obj = new ConfigReader();
-	public WebEventListners webListners;
+	private static final Logger Log = LoggerUtil.getLogger(TestBase.class);
+	protected static ConfigReader obj = new ConfigReader();
+	private WebEventListners webListners;
 
+	public TestBase() {
+		PageFactory.initElements(driver, this);
+	}
 	private static WebDriver getDriverInstance(BrowserType bType) throws Exception {
 		try {
 			switch (bType) {
 
 			case chrome:
-				log.info("Intiallizing chrome driver..");
+				Log.info("Intiallizing chrome driver..");
 				ChromeBrowser ch = new ChromeBrowser();
 				return ch.getChromeDriver();
 
 			case firefox:
-				log.info("Intiallizing firefox driver..");
+				Log.info("Intiallizing firefox driver..");
 				FirefoxBrowser ff = new FirefoxBrowser();
 				return ff.getFirefoxDriverr();
 
 			default:
-				log.info("Unable to initialize driver");
+				Log.info("Unable to initialize driver");
 				throw new Exception("Driver not found :- " + PropertyFileReaderUtil.getPropertiesValue("Browser"));
 			}
 		} catch (Exception e) {
@@ -55,34 +56,22 @@ public class TestBase {
 		driver = e_driver;
 		driver.manage().window().maximize();
 		driver.get(obj.getAppURL());
-		log.info("Navigating to - " + obj.getAppURL());
-		driver.manage().timeouts().pageLoadTimeout(obj.getPageLoadTimeOut(), TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(obj.getImplicitWait(), TimeUnit.SECONDS);
+		Log.info("Navigating to - " + obj.getAppURL());
+		// driver.manage().timeouts().pageLoadTimeout(obj.getPageLoadTimeOut(),
+		// TimeUnit.SECONDS);
+		// driver.manage().timeouts().implicitlyWait(obj.getImplicitWait(),
+		// TimeUnit.SECONDS);
 	}
 
-	/*
-	 * public String getFailsTestCaseScreenShotPath() {
-	 * //System.out.println(ResourceUtil.getResourcePath("FailedTestScreenShot_"
-	 * +DateTimeUtil.getCurrentDateTime())); return
-	 * ResourceUtil.getResourcePath("FailedTestScreenShot_"+DateTimeUtil.
-	 * getCurrentDateTime()); }
-	 */
-	@BeforeTest
+	@BeforeMethod
 	public void setUP() throws Exception {
 		setUpDriver(obj.getBrowser());
 	}
 
-	@AfterTest
+	@AfterMethod
 	public void tearDown() {
-		log.info("Driver closed..");
+		Log.info("Driver closed..");
 		driver.close();
 	}
-
-	/*
-	 * @BeforeSuite public void createFolder() { File f = new
-	 * File(getFailsTestCaseScreenShotPath()); f.mkdir();
-	 * //System.out.println(f.getAbsolutePath()); //return f.getAbsolutePath();
-	 * }
-	 */
 
 }
