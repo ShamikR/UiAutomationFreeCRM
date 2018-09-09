@@ -5,6 +5,7 @@
 		<listener class-name="com.freecrm.uiAutomation.listners.TestNGListners" />
 		<listener class-name="com.freecrm.uiAutomation.listners.AnnotationTransformer" />
 	</listeners>
+	
 	<test name="LoginPageTests">
 		<classes>
 			<class name="com.freecrm.uiAutomation.LoginPageTest.TC001_VerifyPageTitle" />
@@ -12,22 +13,13 @@
 				name="com.freecrm.uiAutomation.LoginPageTest.TC002_VerifyLoginWithValidCredentials" />
 		</classes>
 	</test> <!-- Test -->
-	<test name="HomePageTest">
+	
+	<test name="HomePageTests">
 		<classes>
+			<class name="com.freecrm.uiAutomation.HomePageTest.TC001_VerifyHomePageTitle" />
 			<class
-				name="com.freecrm.uiAutomation.HomePageTest.TC001_VerifyHomePageTitle" />
+				name="com.freecrm.uiAutomation.HomePageTest.TC002_VerifyCreateNewEventFromHomePage" />
 		</classes>
 	</test> <!-- Test -->
-	<test name="ContactsPageTest">
-		<classes>
-			<class
-				name="com.freecrm.uiAutomation.ContactsPageTest.TC001_VerifyContactsPageLebel" />
-		</classes>
-	</test> <!-- Test -->
-	<test name="NewContactsPageTest">
-		<classes>
-			<class
-				name="com.freecrm.uiAutomation.NewContactsPageTest.TC001_CreateNewContacts" />
-		</classes>
-	</test> <!-- Test -->
+	
 </suite> <!-- Suite -->

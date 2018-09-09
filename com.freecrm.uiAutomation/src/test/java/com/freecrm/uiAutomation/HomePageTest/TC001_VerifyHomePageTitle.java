@@ -13,17 +13,21 @@ public class TC001_VerifyHomePageTitle extends TestBase {
 
 	private LoginPage objLoginPage;
 	private HomePage objHomePage;
-	private final Logger log = LoggerUtil.getLogger(TC001_VerifyHomePageTitle.class);
+	private final Logger Log = LoggerUtil.getLogger(TC001_VerifyHomePageTitle.class);
 
 	@Test
 	public void TC001_testHomePageTitle() {
-		log.info("Executing Test Case:- TC001_VerifyHomePageTitle");
+
+		Log.info("Executing Test Case:- TC001_VerifyHomePageTitle");
 		objLoginPage = new LoginPage();
 		objHomePage = objLoginPage.login(obj.getUserName(), obj.getPassword());
 		String homePageTitle = objHomePage.getHomePageTitle();
-		log.info("HomePage Title found as: " + homePageTitle);
+		Log.info("HomePage Title found as: " + homePageTitle);
 		Assert.assertEquals(homePageTitle, "CRMPRO");
 		objHomePage.logOut();
+
+		Log.info("------ End of Test Case TC001_testHomePageTitle -----");
+
 	}
 
 }

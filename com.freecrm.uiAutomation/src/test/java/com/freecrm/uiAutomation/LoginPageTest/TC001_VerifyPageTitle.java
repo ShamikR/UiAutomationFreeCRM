@@ -9,14 +9,19 @@ import com.freecrm.uiAutomation.pages.LoginPage;
 import com.freecrm.uiAutomation.utility.LoggerUtil;
 
 public class TC001_VerifyPageTitle extends TestBase {
-	private final Logger log = LoggerUtil.getLogger(TC001_VerifyPageTitle.class);
+	private static final Logger Log = LoggerUtil.getLogger(TC001_VerifyPageTitle.class);
 	private LoginPage objLoginPage;
-	
+
 	@Test
 	public void TC001_testLoginPageTitle() {
+
 		objLoginPage = new LoginPage();
-		log.info("Executing Test Case:- TC001_testLoginPageTitle");
-		Assert.assertEquals(objLoginPage.getLoginPageTitle(),"#1 Free CRM for Any Business: Online Customer Relationship Software");
+		Log.info("Executing Test Case:- TC001_VerifyPageTitle");
+		Log.info("Page Title - " + objLoginPage.getLoginPageTitle());
+		Assert.assertEquals(objLoginPage.getLoginPageTitle(),
+				"#1 Free CRM software in the cloud for sales and service");
+
+		Log.info("----- END OF TEST CASE TC001_VerifyPageTitle -----");
+
 	}
-	
 }

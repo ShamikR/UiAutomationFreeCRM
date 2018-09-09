@@ -20,6 +20,7 @@ public class FirefoxBrowser {
 		return fireFox;
 	}
 
+	@SuppressWarnings("deprecation")
 	public WebDriver getFirefoxDriverr() {
 		if (System.getProperty("os.name").contains("Mac")) {
 			System.setProperty("webdriver.gecko.driver", ResourceUtil.getResourcePath("src/main/resources/drivers/geckodriver"));
